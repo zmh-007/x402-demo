@@ -1,0 +1,27 @@
+[workspace]
+resolver = "3"
+members = ["client", "server"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[workspace.dependencies]
+x402-types = "2.0"
+x402-reqwest = "2.0"
+x402-axum = { version = "2.0", features = ["telemetry"] }
+# 2.0.2 不开 telemetry 会编译失败(库内部引用了 tracing)
+x402-chain-eip155 = { version = "2.0", features = ["telemetry"] }
+alloy-primitives = "1.6"
+alloy-signer-local = "2"
+axum = "0.8"
+reqwest = "0.13"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+dotenvy = "0.15"
+anyhow = "1"
+url = "2.5"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
