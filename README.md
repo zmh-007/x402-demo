@@ -1,9 +1,9 @@
-# x402 Demo(Rust · Base Sepolia)
+# x402-demo (Rust · Base Sepolia)
 
 一个 Cargo workspace,包含 x402 协议的两端:
 
 ```
-agent-demo/
+x402-demo/
 ├── Cargo.toml          # workspace,统一依赖版本
 ├── .env.example        # client / server 共用的环境变量模板
 ├── client/             # x402-reqwest:自动为 402 接口付费
